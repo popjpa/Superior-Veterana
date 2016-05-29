@@ -5,4 +5,5 @@ Turma 2014
 
 \# | Data | Conteúdo
 --- | --- | --- | ---
-01 | 14/05/2016 | Complete Search
+01 | 14/05/2016 | Complete Search - Iterative
+02 | 28/05/2016 | Complete Search - Recursive
