@@ -10,3 +10,4 @@ Turma 2014
 03 | 11/06/2016 | Divide and Conquer and Binary Search
 04 | 02/07/2016 | Union Find and Minimum Spanning Tree
 05 | 30/07/2016 | Greedy Algorithms
+06 | 05/08/2016 | Cycles, Bridges and Articulation Points, SCC
