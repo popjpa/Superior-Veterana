@@ -11,3 +11,4 @@ Turma 2014
 04 | 02/07/2016 | Union Find and Minimum Spanning Tree
 05 | 30/07/2016 | Greedy Algorithms
 06 | 05/08/2016 | Cycles, Bridges and Articulation Points, SCC
+07 | 03/09/2016 | Resolução das Questões da Maratona POP e OPI
