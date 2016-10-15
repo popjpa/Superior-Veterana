@@ -40,7 +40,7 @@ int main()
 		{
 			int l, r, val;
 			scanf("%d %d %d", &l, &r, &val);
-			updateRange(l, r, val);			//Update -> soma ao indice k o valor [val]
+			updateRange(l, r, val);			//Update
 		}
 	}
 	return 0;
