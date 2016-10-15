@@ -12,3 +12,4 @@ Turma 2014
 05 | 30/07/2016 | Greedy Algorithms
 06 | 05/08/2016 | Cycles, Bridges and Articulation Points, SCC
 07 | 03/09/2016 | Resolução das Questões da Maratona POP e OPI
+08 | 15/10/2016 | Segment Tree, Lazy Propagation, BIT, BIT with Range Updates, BIT 2D, BIT 2D with Range Updates and Quad Tree
