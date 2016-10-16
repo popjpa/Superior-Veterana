@@ -3,7 +3,7 @@
 using namespace std;
 
 int grid[MAX][MAX];
-int tree[1000005];
+int tree[(MAX*MAX)<<2];
 
 int build(int p, int x1, int y1, int x2, int y2);
 int update(int p, int x1, int y1, int x2, int y2, int x, int y, int val);
