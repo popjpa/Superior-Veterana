@@ -115,4 +115,5 @@ void updateRange(int p, int l, int r, int ul, int ur, int val)
 	int mid = (l+r)>>1;
 	updateRange(left(p), l, mid, ul, ur, val);
 	updateRange(right(p), mid+1, r, ul, ur, val);
+	tree[p] = tree[left(p)] + tree[right(p)];
 }
