@@ -3,7 +3,7 @@
 using namespace std;
 
 int grid[MAX][MAX];
-int tree[(MAX*MAX)<<2];
+int tree[1000005];
 
 int build(int p, int x1, int y1, int x2, int y2);
 int update(int p, int x1, int y1, int x2, int y2, int x, int y, int val);
@@ -51,8 +51,8 @@ int build(int p, int x1, int y1, int x2, int y2)
 	
 	int midx = (x1+x2)>>1, midy = (y1+y2)>>1, child = p<<2;		
 	return tree[p] =  build(child-2, x1, y1, midx, midy)		//Dividir em quatro partes
-					+ build(child-1, midx+1, y1, x2, midy)		//problema -> algum filho pode nao existir (matrix nao quadrada)
-					+ build(child, x1, midy+1, midx, y2)
+					+ build(child-1, x1, midy+1, midx, y2)
+					+ build(child, midx+1, y1, x2, midy)		//problema -> algum filho pode nao existir (matrix nao quadrada)
 					+ build(child+1, midx+1, midy+1, x2, y2);						
 }
 int query(int p, int x1, int y1, int x2, int y2, int qx1, int qy1, int qx2, int qy2)
@@ -65,8 +65,8 @@ int query(int p, int x1, int y1, int x2, int y2, int qx1, int qy1, int qx2, int 
 	
 	int midx = (x1+x2)>>1, midy = (y1+y2)>>1, child = p<<2;
 	return 	query(child-2, x1, y1, midx, midy, qx1, qy1, qx2, qy2)
-		+	query(child-1, midx+1, y1, x2, midy, qx1, qy1, qx2, qy2)
-		+	query(child, x1, midy+1, midx, y2, qx1, qy1, qx2, qy2)
+		+	query(child-1, x1, midy+1, midx, y2, qx1, qy1, qx2, qy2)
+		+	query(child, midx+1, y1, x2, midy, qx1, qy1, qx2, qy2)
 		+	query(child+1, midx+1, midy+1, x2, y2, qx1, qy1, qx2, qy2);
 }
 int update(int p, int x1, int y1, int x2, int y2, int x, int y, int val)
@@ -82,7 +82,7 @@ int update(int p, int x1, int y1, int x2, int y2, int x, int y, int val)
 	
 	int midx = (x1+x2)>>1, midy = (y1+y2)>>1, child = p<<2;
 	return tree[p] =  update(child-2, x1, y1, midx, midy, x, y, val)
-					+ update(child-1, midx+1, y1, x2, midy, x, y, val)
-					+ update(child, x1, midy+1, midx, y2, x, y, val)
+					+ update(child-1, x1, midy+1, midx, y2, x, y, val)
+					+ update(child, midx+1, y1, x2, midy, x, y, val) 
 					+ update(child+1, midx+1, midy+1, x2, y2, x, y, val);
 }
